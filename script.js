@@ -1,15 +1,5 @@
 'use strict';
 
-// console.log(document.querySelector('.message').textContent);
-
-// document.querySelector('.message').textContent = 'Hello World';
-
-// document.querySelector('.number').textContent = 13;
-// document.querySelector('.score').textContent = 10;
-
-// document.querySelector('.guess').value = 23;
-// console.log(document.querySelector('.guess').value);
-
 let secretNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
@@ -45,6 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   } else {
     document.querySelector('.message').textContent = 'You lose bruh';
+    document.querySelector('body').style.backgroundColor = 'red';
     score = 0;
   }
   document.querySelector('.score').textContent = score;
